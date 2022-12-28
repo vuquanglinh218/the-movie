@@ -1,0 +1,35 @@
+.movie-card__image {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-top: 150%;
+  border-radius: 20px;
+  position: relative;
+}
+
+.movie-card__title {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.btn.custom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.4s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+
+@media (hover: hover) {
+  .movie-card:hover .btn.custom {
+    opacity: 1;
+  }
+}

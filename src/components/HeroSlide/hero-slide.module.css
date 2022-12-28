@@ -1,0 +1,116 @@
+.hero-slice__wrapper {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-slice__wrapper::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-slice__wrapper::after {
+  content: "";
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(0deg, var(--body-bg), rgba(255, 255, 255, 0));
+  z-index: 1;
+}
+
+.hero-slice__container {
+  display: flex;
+  position: relative;
+  justify-self: flex-start;
+}
+
+.hero-slice__content {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+  z-index: 100;
+}
+
+.hero-slice__poster {
+  width: 20%;
+  border-radius: 20px;
+  transform: translateX(100px);
+  opacity: 0;
+  transition: all 0.9s linear;
+  box-shadow: var(--box-shadow);
+}
+
+.hero-slice__content .title {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 20px;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 0.9s linear;
+  word-break: break-all;
+}
+
+.hero-slice__content .overview {
+  font-weight: 700;
+  margin-bottom: 20px;
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 0.9s linear;
+}
+
+.hero-slice__content .btns {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.9s linear;
+  z-index: inherit;
+}
+
+.btns * ~ * {
+  margin-left: 24px;
+}
+
+.active .hero-slice__poster,
+.active .hero-slice__content .overview,
+.active .hero-slice__content .title,
+.active .hero-slice__content .btns
+{
+  opacity: 1;
+  transform: translate(0);
+}
+
+.iframe__wrapper {
+  width: 800px;
+  height: 600px;
+}
+
+.iframe__wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 425px) {
+  .hero-slice__poster {
+    display: none;
+  }
+
+  .hero-slice__content {
+    width: 100%;
+  }
+}
