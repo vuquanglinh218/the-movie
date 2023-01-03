@@ -53,14 +53,14 @@ const MovieList = ({ cate, type, id }) => {
           spaceBetween: 10,
         },
         1024: {
-          slidesPerView: 7.7,
+          slidesPerView: 7.5,
           spaceBetween: 10,
         },
       }}
     >
       {items.map((item, index) => (
         <SwiperSlide key={index}>
-          <MovieCard item={item} />
+          <MovieCard item={item} category={cate}/>
         </SwiperSlide>
       ))}
     </Swiper>

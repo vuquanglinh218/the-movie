@@ -1,0 +1,22 @@
+.input-search {
+  margin: 20px 0;
+  max-width: 500px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 3px
+}
+
+.input {
+  font-size: 1.2rem;
+  flex: 1;
+  padding: 0px 10px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.custom.btn {
+  box-shadow: none;
+}

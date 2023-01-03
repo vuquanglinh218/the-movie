@@ -62,7 +62,7 @@ ul {
 }
 
 .grid.wide {
-  max-width: 1200px;
+  max-width: 1700px;
   margin: 0px auto;
 }
 
@@ -200,13 +200,12 @@ ul {
   html {
     font-size: 75%;
   }
-  
+
   .grid.wide {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
-
 
 @media (min-width: 426px) and (max-width: 820px) {
   html {
@@ -244,6 +243,7 @@ ul {
 
   .m-1,
   .m-2,
+  .m-2-4,
   .m-3,
   .m-4,
   .m-5,
@@ -261,109 +261,113 @@ ul {
     flex: 0 0 8.33333%;
     max-width: 8.33333%;
   }
-  
+
   .m-2 {
     flex: 0 0 16.66667%;
     max-width: 16.66667%;
   }
-  
+
+  .m-2-4 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+
   .m-3 {
     flex: 0 0 25%;
     max-width: 25%;
   }
-  
+
   .m-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
   }
-  
+
   .m-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%;
   }
-  
+
   .m-6 {
     flex: 0 0 50%;
     max-width: 50%;
   }
-  
+
   .m-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%;
   }
-  
+
   .m-8 {
     flex: 0 0 66.66667%;
     max-width: 66.66667%;
   }
-  
+
   .m-9 {
     flex: 0 0 75%;
     max-width: 75%;
   }
-  
+
   .m-10 {
     flex: 0 0 83.33333%;
     max-width: 83.33333%;
   }
-  
+
   .m-11 {
     flex: 0 0 91.66667%;
     max-width: 91.66667%;
   }
-  
+
   .m-12 {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  
+
   .m-o-1 {
     margin-left: 8.33333%;
   }
-  
+
   .m-o-2 {
     margin-left: 16.66667%;
   }
-  
+
   .m-o-3 {
     margin-left: 25%;
   }
-  
+
   .m-o-4 {
     margin-left: 33.33333%;
   }
-  
+
   .m-o-5 {
     margin-left: 41.66667%;
   }
-  
+
   .m-o-6 {
     margin-left: 50%;
   }
-  
+
   .m-o-7 {
     margin-left: 58.33333%;
   }
-  
+
   .m-o-8 {
     margin-left: 66.66667%;
   }
-  
+
   .m-o-9 {
     margin-left: 75%;
   }
-  
+
   .m-o-10 {
     margin-left: 83.33333%;
   }
-  
+
   .m-o-11 {
     margin-left: 91.66667%;
   }
 }
 
 @media (min-width: 821px) {
-
   .grid.wide {
     padding-left: 20px;
     padding-right: 20px;
@@ -394,6 +398,7 @@ ul {
   }
 
   .l-1,
+  .l-1-5,
   .l-2,
   .l-3,
   .l-4,
@@ -412,102 +417,107 @@ ul {
     flex: 0 0 8.33333%;
     max-width: 8.33333%;
   }
-  
+
+  .l-1-5 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+
   .l-2 {
     flex: 0 0 16.66667%;
     max-width: 16.66667%;
   }
-  
+
   .l-3 {
     flex: 0 0 25%;
     max-width: 25%;
   }
-  
+
   .l-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
   }
-  
+
   .l-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%;
   }
-  
+
   .l-6 {
     flex: 0 0 50%;
     max-width: 50%;
   }
-  
+
   .l-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%;
   }
-  
+
   .l-8 {
     flex: 0 0 66.66667%;
     max-width: 66.66667%;
   }
-  
+
   .l-9 {
     flex: 0 0 75%;
     max-width: 75%;
   }
-  
+
   .l-10 {
     flex: 0 0 83.33333%;
     max-width: 83.33333%;
   }
-  
+
   .l-11 {
     flex: 0 0 91.66667%;
     max-width: 91.66667%;
   }
-  
+
   .l-12 {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  
+
   .l-o-1 {
     margin-left: 8.33333%;
   }
-  
+
   .l-o-2 {
     margin-left: 16.66667%;
   }
-  
+
   .l-o-3 {
     margin-left: 25%;
   }
-  
+
   .l-o-4 {
     margin-left: 33.33333%;
   }
-  
+
   .l-o-5 {
     margin-left: 41.66667%;
   }
-  
+
   .l-o-6 {
     margin-left: 50%;
   }
-  
+
   .l-o-7 {
     margin-left: 58.33333%;
   }
-  
+
   .l-o-8 {
     margin-left: 66.66667%;
   }
-  
+
   .l-o-9 {
     margin-left: 75%;
   }
-  
+
   .l-o-10 {
     margin-left: 83.33333%;
   }
-  
+
   .l-o-11 {
     margin-left: 91.66667%;
   }
