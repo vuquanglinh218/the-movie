@@ -1,0 +1,56 @@
+@import '../../scss/variable';
+
+.item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  .item__img {
+    padding-top: 150%;
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  .item__title {
+    color: $white;
+    margin: {
+      top: 16px;
+    }
+  }
+
+  &:hover {
+    .btn-play {
+      display: block;
+    }
+  }
+}
+
+.btn-play {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 150%;
+  border-radius: 20px;
+  display: none;
+  transition: all 0.4s linear;
+  animation: show 0.4s linear forwards;
+
+  @keyframes show {
+    from {
+      backdrop-filter: blur(0px);
+    }
+    to {
+      backdrop-filter: blur(4px);
+    }
+  }
+  .cs.btn {
+    padding: 3px;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

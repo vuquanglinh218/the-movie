@@ -1,0 +1,102 @@
+@import '../../scss/variable';
+@import '../../scss/mixin';
+
+.btn {
+  background-color: transparent;
+  display: inline-block;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  @include font-size($text-sm, $line-sm);
+  font-weight: 500;
+  font-family: $font-family;
+  text-decoration: none;
+  color: $black;
+  padding: 6px 16px;
+  transition: all 0.3s linear;
+  text-align: center;
+  min-width: 100px;
+  &~& {
+    margin-left: 10px;
+  }
+}
+
+.primary {
+  background-color: $main-color;
+  color: $white;
+  border: 1px solid $main-color;
+
+  &:hover {
+    background-color: $rose-600;
+    border: 1px solid $rose-600;
+  }
+}
+
+.outline {
+  background-color: transparent;
+  color: $txt-white;
+  border: 1px solid $txt-white;
+
+  &:hover {
+    background-color: $main-color;
+    border: 1px solid $main-color;
+  }
+}
+
+.text {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: $txt-black;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.round {
+  border-radius: 8px;
+}
+
+.round_full {
+  border-radius: 100px;
+}
+
+.xs {
+  @include font-size($text-xs, $line-xs);
+  padding: 4px 10px;
+  min-width: 72px;
+  .left_icon {
+    margin-right: 6px;
+  }
+  .right_icon {
+    margin-left: 6px;
+  }
+}
+
+.sm {
+  @include font-size($text-sm, $line-sm);
+  padding: 6px 16px;
+  min-width: 92px;
+  .left_icon {
+    margin-right: 8px;
+  }
+  .right_icon {
+    margin-left: 8px;
+  }
+}
+
+.lg {
+  @include font-size($text-base, $line-base);
+  padding: 6px 18px;
+  min-width: 104px;
+  .left_icon {
+    margin-right: 12px;
+  }
+  .right_icon {
+    margin-left: 12px;
+  }
+}
+
+.left_icon,
+.right_icon {
+  display: inline-block;
+}

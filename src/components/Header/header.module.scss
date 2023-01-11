@@ -1,0 +1,131 @@
+@import '../../scss/variable';
+@import '../../scss/mixin';
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: {
+    left: 50px;
+    right: 50px
+  }
+  height: $header-height;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+
+.navigate-title {
+  color: $txt-white;
+  font-size: $text-2xl;
+  font-weight: 500;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $txt-black;
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 300px;
+  width: 100%;
+  .search-bar__icon {
+    color: $txt-black;
+    padding: 0 10px;
+  }
+
+  .search-bar__input {
+    ::placeholder {
+      color: $txt-black;
+    }
+    color: $white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    @include font-size($text-sm, $line-sm);
+    flex: 1;
+  }
+}
+
+.menu__list, .menu__btn {
+  display: none;
+}
+
+@media (max-width: $lg) {
+  header {
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  header {
+    height: auto;
+    padding:  {
+      top: 10px;
+      bottom: 10px;
+    }
+  }
+
+  .menu__btn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: $white;
+    font-size: $text-lg;
+  }
+
+  .menu__list {
+    display: none;
+    width: 100%;
+    overflow: hidden;
+    animation: slide 1s linear;
+
+    &.menu__active {
+      display: block;
+    }
+    @keyframes slide {
+      from {
+        height: 0px;
+      }
+      to {
+        height: 100%;
+      }
+    }
+  }
+
+
+  .search-bar {
+    max-width: 500px;
+    width: 100%;
+    margin: {
+      top: 12px;
+      bottom: 12px;
+    }
+  }
+
+  .section-item {
+    margin: {
+      top: 12px;
+    }
+  }
+
+  .nav-item {
+    color: $white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: $text-base;
+    font-weight: 500;
+    &.active, &:hover {
+      color: $main-color;
+    }
+  }
+}

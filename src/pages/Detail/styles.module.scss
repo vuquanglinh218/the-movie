@@ -1,0 +1,116 @@
+@import '../../scss/variable';
+
+.item {
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: {
+    top: 220px;
+    left: 50px;
+    right: 50px;
+  }
+}
+
+.content {
+  display: grid;
+  color: $white;
+  grid-template-columns: 20% 50% 30%;
+  gap: 50px;
+  margin: {
+    bottom: 20px;
+  }
+
+  &__avatar {
+  }
+
+  &__img {
+    width: 100%;
+    margin: auto;
+    border-radius: 16px;
+  }
+
+  &__detail {
+    padding: {
+      top: 40px;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: {
+      bottom: 16px;
+    }
+  }
+
+  &__line-text {
+    font-size: $text-base;
+    margin: {
+      bottom: 16px;
+    }
+  }
+
+  &__btn {
+    margin: {
+      bottom: 20px;
+    }
+  }
+
+  &__paragraphy {
+    line-height: 1.8;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: {
+      top: 20px;
+    }
+
+    .rating__votes {
+      flex: 1;
+      margin: {
+        left: 20px;
+      }
+      font-size: 1.2rem;
+
+      span {
+        font-size: 1rem;
+        color: #999;
+      }
+    }
+  }
+}
+
+.ring {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background-color: $main-color;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    background-color: $body-bg;
+    width: 88%;
+    height: 88%;
+    border-radius: 100px;
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  & p {
+    position: relative;
+    z-index: 10;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+}

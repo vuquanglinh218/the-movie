@@ -1,0 +1,10 @@
+@import '../../scss/variable';
+
+.container-loadmore {
+  display: flex;
+  justify-content: center;
+  margin: {
+    top: 12px;
+    bottom: 12px;
+  }
+}

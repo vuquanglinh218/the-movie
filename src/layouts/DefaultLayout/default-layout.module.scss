@@ -1,0 +1,65 @@
+@import '../../scss/variable';
+
+.wraper {
+  width: 100%;
+  // display: flex;
+  // margin-top: $header-height;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.content {
+  margin: {
+    left: $sidebar-width;
+    right: $sidebar-right-width;
+  }
+  transition: all 0.4s linear;
+}
+
+.right-sidebar {
+  width: $sidebar-right-width;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: $xxl) {
+  .content {
+    margin: {
+      left: $sidebar-width;
+      right: 0
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .content {
+    margin: {
+      left: $sidebar-width-shrink;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .content {
+    margin: {
+      left: $sidebar-width-shrink;
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .content {
+    margin: {
+      left: 0;
+      right: 0;
+    }
+  }
+}

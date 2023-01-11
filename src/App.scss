@@ -1,0 +1,37 @@
+@use './scss/grid';
+@import './scss/variable';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-family;
+}
+
+body {
+  background-color: $body-bg;
+  line-height: 1;
+}
+
+.section {
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: {
+      top: 32px;
+      bottom: 20px;
+    }
+  }
+
+  &__title {
+    color: $white;
+    font-size: $text-lg;
+    font-weight: 500;
+  }
+}

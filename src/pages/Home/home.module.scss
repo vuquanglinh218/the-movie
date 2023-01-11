@@ -1,0 +1,24 @@
+@import '../../scss/variable';
+
+.home-container {
+  position: relative;
+  padding: {
+    left: 50px;
+    right: 50px;
+  }
+}
+
+.cs.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: $lg) {
+  .home-container {
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+  }
+}

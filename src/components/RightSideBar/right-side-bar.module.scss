@@ -1,0 +1,47 @@
+@import '../../scss/variable';
+
+.right-sidebar {
+  color: $white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: $sidebar-right-width;
+  padding: {
+    top: $header-height;
+    left: 60px;
+    right: 60px;
+  }
+  overflow-y: scroll;
+  &::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 95%;
+    background-color: $separate-line;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.section {
+  &~& {
+    margin-top: 20px;
+  }
+  .section-title {
+    font-size: $text-lg;
+    font-weight: 500;
+    padding: {
+      // top: 12px;
+      bottom: 12px;
+    }
+  }
+}
+
+@media (max-width: $xxl) {
+  .right-sidebar {
+    display: none;
+  }
+}
