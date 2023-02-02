@@ -19,7 +19,7 @@ const Detail = () => {
   return (
     <div className={cx('grid', 'wide')}>
       <div className='header'>
-
+        <p>Title</p>
       </div>
       <MovieList cate={category} id={id} type="similar" />
     </div>
