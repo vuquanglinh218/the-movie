@@ -8,12 +8,25 @@ import Button from '../../components/Button';
 import HeroSlider from '../../components/HeroSlider';
 import ListItemHorizontal from '../../components/ListItemHorizontal';
 import { category, movieType, tvType } from '../../api/tmdbApi';
+import { useContext, useEffect } from 'react';
+import { MyContext } from '../../Context';
+import { faCommentsDollar } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
 const Home = () => {
+
+  const {titleHeader} = useContext(MyContext)
+
+  const [titleHeaderValue, setTitleHeaderValue] = titleHeader
+
+  useEffect(() => {
+    setTitleHeaderValue('Home')
+  }, [])
+
   return (
     <div className={cx('home-container')}>
+      <p>{titleHeader}</p>
       <HeroSlider />
       <div className={cx('section')}>
         <div className={cx('section__header')}>

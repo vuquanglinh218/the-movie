@@ -4,10 +4,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { publicRouter } from './config/RouterConfig';
 import { DefaultLayout } from './layouts';
+import Context from './Context';
 
 function App() {
   return (
     <BrowserRouter>
+    <Context>
       <Routes>
         {
           publicRouter.map((item, index) => {
@@ -25,6 +27,7 @@ function App() {
           })
         }
       </Routes>
+    </Context>
     </BrowserRouter>
   );
 }

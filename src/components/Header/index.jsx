@@ -1,20 +1,23 @@
 import styles from './header.module.scss';
 import classNames from 'classnames/bind';
 
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 
 import Button from '../Button';
 import Images from '../../access/images';
+import { MyContext } from '../../Context';
 
 const cx = classNames.bind(styles);
 
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const [active, setActive] = useState(location.pathname);
+  const { active, titleHeader } = useContext(MyContext);
+  const [activeValue, setActiveValue] = active;
+  const [titleHeaderValue, setTitleHeaderValue] = titleHeader;
   const [menuActive, setMenuActive] = useState(false);
   const [input, setInput] = useState('');
   // const [category] = useParams();
@@ -42,7 +45,7 @@ const Header = () => {
       icon: solid('desktop'),
     },
     {
-      path: '/wathlist',
+      path: '/#',
       content: 'Watchlist',
       icon: solid('heart'),
     },
@@ -54,7 +57,7 @@ const Header = () => {
   ];
   return (
     <header>
-      <p className={cx('navigate-title')}>Home</p>
+      <p className={cx('navigate-title')}>{titleHeaderValue}</p>
 
       <button className={cx('menu__btn')} onClick={() => setMenuActive(!menuActive)}>
         <FontAwesomeIcon icon={solid('bars')} />
@@ -66,8 +69,8 @@ const Header = () => {
             <li className={cx('section-item')} key={index}>
               <Link
                 to={item.path}
-                className={cx('nav-item', `${active == item.path && 'active'}`)}
-                onClick={() => setActive(item.path)}
+                className={cx('nav-item', `${activeValue == item.path && 'active'}`)}
+                onClick={() => setActiveValue(item.path)}
               >
                 {/* <FontAwesomeIcon className={cx('nav-item__icon')} icon={item.icon} /> */}
                 <span className={cx('nav-item__text')}>{item.content}</span>

@@ -3,17 +3,19 @@ import classNames from 'classnames/bind';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro';
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Button from '../Button';
 import { Link } from 'react-router-dom';
+import { MyContext } from '../../Context';
 
 const cx = classNames.bind(styles);
 
 const SideBar = () => {
   const location = useLocation()
-  const [active, setActive] = useState(location.pathname);
+  const {active} = useContext(MyContext);
+  const [activeValue, setActiveValue] = active
   const [show, setShow] = useState(false);
 
   const btnRef = useRef(null);
@@ -71,7 +73,7 @@ const SideBar = () => {
           {listNav.map((item, index) => {
             return (
               <li className={cx('section-item')} key={index}>
-                <Link to={item.path} className={cx('nav-item', `${active == item.path && 'active'}`)} onClick={() => setActive(item.path)}>
+                <Link to={item.path} className={cx('nav-item', `${activeValue == item.path && 'active'}`)} onClick={() => setActiveValue(item.path)}>
                   <FontAwesomeIcon className={cx('nav-item__icon')} icon={item.icon} />
                   <span className={cx('nav-item__text')}>{item.content}</span>
                 </Link>

@@ -29,7 +29,7 @@ const tmdbApi = {
     return axiosClient(url, params);
   },
   getVideos: (cate, id) => {
-    const url = category[cate] + '/' + id + 'videos';
+    const url = category[cate] + '/' + id + '/videos';
     return axiosClient(url, { params: {} });
   },
   detail: (cate, id, params) => {
@@ -43,6 +43,10 @@ const tmdbApi = {
   search: (cate, params) => {
     const url = 'search/' + category[cate];
     return axiosClient(url, params);
+  },
+  credit: (cate, id) => {
+    const url = category[cate] + '/' + id + '/credits';
+    return axiosClient(url, { params: {} });
   },
 };
 
